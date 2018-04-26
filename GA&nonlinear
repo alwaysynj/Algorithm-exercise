@@ -172,3 +172,15 @@ for i=1:maxgen
     trace=[trace;avgfitness bestfitness]; %记录每一代进化中平均适应度,和最好的适应度，放在trace矩阵内的下一行
 end
 %进化结束
+
+ figure
+[r c]=size(trace);
+plot([1:r]',trace(:,1),'r-',[1:r]',trace(:,2),'b--');% 以1-r作为横坐标，trace的第一列即平均适应度为纵坐标，用红色实线画图以及...
+title(['函数值曲线  ' '终止代数＝' num2str(maxgen)],'fontsize',12);
+xlabel('进化代数','fontsize',12);ylabel('函数值','fontsize',12);
+legend('各代平均值','各代最佳值','fontsize',12);%注释
+ylim([1 8])%限制y轴的坐标
+disp('函数值                   变量');
+%窗口显示
+disp([bestfitness x]);
+grid on %网格化图（根据坐标轴）
