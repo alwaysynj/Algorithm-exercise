@@ -41,7 +41,7 @@ end                                            %若flag=0不可行，则
                                       %继续循环，直到算出可行初始序
 
 function ret=Mutation(pmutation,lenchrom,chrom,sizepop,pop,bound)
-% 本函数完成变异操作
+%% 本函数完成变异操作
 % pcorss                input  : 变异概率
 % lenchrom              input  : 染色体长度
 % chrom                 input  : 染色体群
