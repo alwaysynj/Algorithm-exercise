@@ -85,6 +85,7 @@ for i=1:sizepop
 end
 ret=chrom;
 
+%%本函数完成测试生成的染色体是否符合要求
 function flag=test(lenchrom,bound,code)
 % lenchrom   input : 染色体长度
 % bound      input : 变量的取值范围
